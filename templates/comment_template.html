@@ -1,0 +1,46 @@
+
+<table>
+    <tfoot>
+        <tr style="text-align: left;">
+        <td style="width: 30%; text-align: center;">
+            <a id="button-del" href="/delete_comment/?id={comment_id}" > Удалить </a>
+        </td>
+        <td  style="padding-bottom:5px; font-size:15px;"> Комментарий номер: {comment_id} от {datetime} </td>
+        </tr>
+    </tfoot>
+    <tbody>
+        <tr>
+        <td style="width: 30%;">
+        <table style="width: 95%; height: 80%; float: left;">
+            <tbody>
+                <tr>
+                <td> <b> {name} </b></td>
+                </tr>
+                <tr>
+                <td> <b> {patronim} </b> </td>
+                </tr>
+                <tr>
+                <td> <b> {lastname} <b> </td>
+                </tr>
+                <tr>
+                <td style="font-size:15px;vertical-align: bottom"> {telephone} </td>
+                </tr>
+                <tr>
+                <td style="font-size:15px;vertical-align: top"> {email} </td>
+                </tr>
+                <tr>
+                <td style="font-size:15px;vertical-align: bottom">  {region} </td>
+                </tr>
+                <tr>
+                <td style="font-size:15px;vertical-align: top"> {town} </td>
+                </tr>
+            </tbody>
+        </table>
+        </td>
+            <td style="text-align: left; vertical-align: top; padding-top:35px; padding-bottom:35px;">
+                    {comment}
+            </td>
+        </tr>
+    </tbody>
+</table>
+

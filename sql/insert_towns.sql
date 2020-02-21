@@ -1,0 +1,1 @@
+INSERT INTO towns (region_id, name) VALUES ({}, '{}');

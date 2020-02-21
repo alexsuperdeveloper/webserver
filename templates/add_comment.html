@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comment posting form</title>
+    <script src='{% static %}regions.js'></script>
+    <link rel="stylesheet" type="text/css" href="{% static %}styles.css">
+</head>
+<body >
+<div id="form-div">
+    <form class="form" id="feedback-form" name="comment" action="/post_comment/" method="POST">
+        <div><input class="feedback-input" type="text" name="user_name" placeholder="Имя" required="required" /></div>
+        <div><input class="feedback-input" type="text" name="user_patronim" placeholder="Отчество" /></div>
+        <div><input class="feedback-input" type="text" name="user_last_name" placeholder="Фамилия" required="required" /></div>
+        <div><select class="feedback-input" name="region_id" onchange="changeRegion(this.value);"> {% regions %} </select></div>
+        <div><select class="feedback-input" id="town_name" name="town_id" value="">
+            <option value="{% id %}">{% name %}</option>
+        </select></div>
+        <div><input  class="feedback-input" type="text" name="user_phone" placeholder="Телефон в формате:(987)6543210" pattern="\([0-9]{3}\)[0-9]{7}" /></div>
+        <div><input  class="feedback-input" type="text" name="user_email" placeholder="Еmail в формате: email@example.com"
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" /></div>
+        <div><textarea class="feedback-input" type="textarea" name="comment_content"
+                    placeholder="Комментарий" required="required" ></textarea></div>
+        <div><input type="submit" value="Отправить" id="button-blue"/></div>
+    </form>
+</div>
+</body>
+</html>

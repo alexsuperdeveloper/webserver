@@ -1,0 +1,1 @@
+SELECT id, name FROM towns WHERE region_id={};
